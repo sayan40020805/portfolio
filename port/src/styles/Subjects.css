@@ -1,0 +1,41 @@
+.subjects-section {
+  padding: 60px 20px;
+  background-color: #f0f8ff; /* Light blue background */
+  text-align: center;
+}
+
+.subjects-section h2 {
+  font-size: 2rem;
+  color: #0d6efd; /* Bootstrap blue */
+  margin-bottom: 30px;
+}
+
+.subjects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.subject-card {
+  padding: 18px 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  font-size: 1.1rem;
+  color: #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.subject-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Highlight strong subjects */
+.strong-subject {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #084298;
+}
