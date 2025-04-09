@@ -6,8 +6,8 @@ import Education from "./components/Education";
 import Achievements from "./components/Achievements";
 import Internships from "./components/Internships";
 import Subjects from "./components/Subjects";
-import Contact from "./components/contact";
-import { useScrollFadeIn } from "./hooks/useScrollFadein";
+import Contact from "./components/Contact";
+import { useScrollFadeIn } from "./hooks/useScrollFadeIn";
 import "./styles/App.css";
 
 const App = () => {
