@@ -9,6 +9,8 @@ import {
   SiC,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+
 
 const Skills = () => {
   const technicalSkills = [
@@ -19,7 +21,9 @@ const Skills = () => {
     { name: "Java", icon: <FaJava color="#f89820" /> },
     { name: "Python", icon: <SiPython color="#3776AB" /> },
     { name: "C", icon: <SiC color="#A8B9CC" /> },
+    { name: "MySQL", icon: <SiMysql color="#00758F" /> }, // ✅ Added MySQL
   ];
+
 
   const softSkills = [
     "Communication",

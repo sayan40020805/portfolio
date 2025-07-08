@@ -1,27 +1,43 @@
+/* Header container */
 .header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #111111;
+  box-shadow: 0 8px 20px rgba(0, 224, 255, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
+/* Navbar layout */
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
+  /* left logo, right links */
   align-items: center;
+  transform: translateZ(20px);
 }
 
+/* Logo */
 .logo {
-  font-size: 1.5rem;
+  /*margin-right: 15px;*/
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #0073e6;
+  color: #00e0ff;
+  text-shadow: 0 0 8px #00e0ff, 0 0 16px rgba(0, 224, 255, 0.6);
+  transition: transform 0.3s ease;
 }
 
+.logo:hover {
+  transform: scale(1.05) rotateX(0deg);
+}
+
+/* Navigation links */
 .nav-links {
+  margin-left: 20px;
   list-style: none;
   display: flex;
   gap: 20px;
@@ -29,22 +45,34 @@
 
 .nav-links li a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 10px 16px;
+  border-radius: 50px;
+  /* Rounded button */
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 5px rgba(0, 224, 255, 0.15);
+  transition: all 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
+/* Glowing effect on hover */
 .nav-links li a:hover {
-  color: #0073e6;
+  color: #00e0ff;
+  background: rgba(0, 224, 255, 0.08);
+  box-shadow:
+    0 0 10px rgba(0, 224, 255, 0.6),
+    0 0 20px rgba(0, 224, 255, 0.4),
+    0 0 30px rgba(0, 224, 255, 0.2);
+  transform: translateY(-2px);
 }
 
-/* Responsive */
+/* Responsive: hide nav on mobile */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
 
   .logo {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
