@@ -1,13 +1,15 @@
 .subjects-section {
   padding: 60px 20px;
-  background-color: #f0f8ff; /* Light blue background */
+  background-color: #0f0f0f;
+  /* Unified black background */
   text-align: center;
 }
 
 .subjects-section h2 {
-  font-size: 2rem;
-  color: #0d6efd; /* Bootstrap blue */
+  font-size: 2.4rem;
+  color: #00bfff;
   margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
 }
 
 .subjects-container {
@@ -19,23 +21,32 @@
 
 .subject-card {
   padding: 18px 25px;
-  background-color: #ffffff;
+  background-color: #111;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 4px 12px rgba(0, 191, 255, 0.15),
+    0 0 18px rgba(0, 191, 255, 0.2),
+    inset 0 0 8px rgba(0, 191, 255, 0.08);
   font-size: 1.1rem;
-  color: #333;
-  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .subject-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 8px 24px rgba(0, 191, 255, 0.4),
+    0 0 25px rgba(0, 191, 255, 0.4),
+    inset 0 0 12px rgba(0, 191, 255, 0.1);
 }
 
 /* Highlight strong subjects */
 .strong-subject {
-  background-color: #0d6efd;
-  color: white;
+  background-color: transparent;
+  color: #00e0ff;
   font-weight: bold;
-  border: 2px solid #084298;
+  border: 2px solid #00e0ff;
+  box-shadow:
+    0 0 8px rgba(0, 224, 255, 0.6),
+    inset 0 0 6px rgba(0, 224, 255, 0.3);
 }

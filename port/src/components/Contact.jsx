@@ -7,6 +7,7 @@ import {
   FaFacebook,
   FaWhatsapp,
   FaInstagram,
+  FaGithub, // ✅ Import GitHub icon
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -65,6 +66,14 @@ const Contact = () => {
           title="Instagram"
         >
           <FaInstagram className="icon" />
+        </a>
+        <a
+          href="https://github.com/Sayan23-sketch"
+          target="_blank"
+          rel="noreferrer"
+          title="GitHub"
+        >
+          <FaGithub className="icon" />
         </a>
       </div>
     </section>

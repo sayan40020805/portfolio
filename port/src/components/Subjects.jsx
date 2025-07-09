@@ -5,6 +5,7 @@ const Subjects = () => {
   const subjects = [
     { name: "Operating Systems", strong: true },
     { name: "Data Structures and Algorithms", strong: true },
+    { name: "Object-Oriented Programming System (OOPs)", strong: true },
   ];
 
   return (
