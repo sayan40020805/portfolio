@@ -1,52 +1,157 @@
-.subjects-section {
-  padding: 60px 20px;
-  background-color: #0f0f0f;
-  /* Unified black background */
-  text-align: center;
-}
-
-.subjects-section h2 {
-  font-size: 2.4rem;
-  color: #00bfff;
-  margin-bottom: 30px;
-  text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
-}
-
-.subjects-container {
+.subjects-3d-section {
+  min-height: 70vh;
+  background-color: #0f0f0f; /* Matches internships section */
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+  padding: 40px 20px;
+  color: #ffffff;
+  overflow: hidden;
 }
 
-.subject-card {
-  padding: 18px 25px;
-  background-color: #111;
-  border-radius: 12px;
-  box-shadow:
-    0 4px 12px rgba(0, 191, 255, 0.15),
-    0 0 18px rgba(0, 191, 255, 0.2),
-    inset 0 0 8px rgba(0, 191, 255, 0.08);
-  font-size: 1.1rem;
+.subjects-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #00bfff;
+  text-shadow: 0 0 12px rgba(0, 191, 255, 0.7);
+  position: relative;
+}
+
+.subjects-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #00bfff;
+  margin: 16px auto 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.subject-3d-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  perspective: 1500px;
+  position: relative;
+}
+
+/* Subject card */
+.subject-3d-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 16px;
+  width: 280px;
+  height: 320px;
   color: #fff;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+  transform-style: preserve-3d;
+  backdrop-filter: blur(3px);
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #00bfff transparent;
 }
 
-.subject-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow:
-    0 8px 24px rgba(0, 191, 255, 0.4),
-    0 0 25px rgba(0, 191, 255, 0.4),
-    inset 0 0 12px rgba(0, 191, 255, 0.1);
+/* WebKit scrollbar (Chrome, Safari) */
+.subject-3d-card::-webkit-scrollbar {
+  width: 6px;
+}
+.subject-3d-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+.subject-3d-card::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 8px;
 }
 
-/* Highlight strong subjects */
-.strong-subject {
-  background-color: transparent;
-  color: #00e0ff;
-  font-weight: bold;
-  border: 2px solid #00e0ff;
+/* Card positions */
+.center-card {
+  transform: scale(1.2);
+  z-index: 3;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+  border: 2px solid #00bfff;
+}
+
+.left-card {
+  transform: rotateY(25deg) scale(0.9) translateX(-20px);
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.right-card {
+  transform: rotateY(-25deg) scale(0.9) translateX(20px);
+  z-index: 1;
+  opacity: 0.7;
+}
+
+/* Blur others on hover */
+.subject-3d-container:hover .subject-3d-card {
+  filter: blur(2px);
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.subject-3d-card:hover {
+  transform: scale(1.25) !important;
+  filter: none !important;
+  opacity: 1 !important;
+  z-index: 5;
   box-shadow:
-    0 0 8px rgba(0, 224, 255, 0.6),
-    inset 0 0 6px rgba(0, 224, 255, 0.3);
+    0 0 30px rgba(0, 191, 255, 0.6),
+    0 0 50px rgba(0, 191, 255, 0.3);
+  border: 2px solid #00bfff;
+}
+
+/* Text styles */
+.subject-3d-card h3 {
+  font-size: 1.4rem;
+  color: #00bfff;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 0 0 6px rgba(0, 191, 255, 0.6);
+}
+
+.subject-3d-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subject-3d-card ul li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #ddd;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.subject-3d-card ul li:hover {
+  color: #00bfff;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .subject-3d-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .subject-3d-card {
+    width: 90%;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    height: auto;
+    max-height: 400px;
+  }
+
+  .subject-3d-container:hover .subject-3d-card {
+    filter: none;
+    opacity: 1;
+  }
 }

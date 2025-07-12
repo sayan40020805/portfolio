@@ -3,21 +3,68 @@ import "../styles/Subjects.css";
 
 const Subjects = () => {
   const subjects = [
-    { name: "Operating Systems", strong: true },
-    { name: "Data Structures and Algorithms", strong: true },
-    { name: "Object-Oriented Programming System (OOPs)", strong: true },
+    {
+      name: "Operating Systems",
+      concepts: [
+        "Processes & Threads",
+        "CPU Scheduling Algorithms",
+        "Memory Management (Paging, Segmentation)",
+        "Virtual Memory",
+        "Deadlocks: Detection, Prevention, Avoidance",
+        "File Systems",
+        "Disk Scheduling",
+        "System Calls",
+        "Process Synchronization (Semaphores, Monitors)"
+      ],
+    },
+    {
+      name: "Data Structures & Algorithms",
+      concepts: [
+        "Recursion & Backtracking",
+        "Stacks, Queues, Linked Lists",
+        "Trees & Binary Search Trees",
+        "Graphs: BFS, DFS, Dijkstra",
+        "Sorting Algorithms (Quick, Merge, Heap)",
+        "Searching Algorithms (Binary Search)",
+        "Hashing & Hash Tables",
+        "Greedy Algorithms",
+        "Divide and Conquer",
+        "Dynamic Programming"
+      ],
+    },
+    {
+      name: "Object-Oriented Programming (OOPs)",
+      concepts: [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism (Compile-time & Runtime)",
+        "Abstraction",
+        "Classes & Objects",
+        "Constructors & Destructors",
+        "Interfaces vs Abstract Classes",
+        "Exception Handling",
+        "Access Modifiers",
+        "SOLID Principles"
+      ],
+    },
   ];
 
   return (
-    <section id="subjects" className="subjects-section">
-      <h2>Subjects</h2>
-      <div className="subjects-container">
+    <section className="subjects-3d-section" id="subjects">
+      <h2 className="subjects-title">Key Subjects</h2>
+      <div className="subject-3d-container">
         {subjects.map((subject, index) => (
           <div
-            className={`subject-card ${subject.strong ? "strong-subject" : ""}`}
+            className={`subject-3d-card ${index === 1 ? "center-card" : index === 0 ? "left-card" : "right-card"
+              }`}
             key={index}
           >
-            {subject.name}
+            <h3>{subject.name}</h3>
+            <ul>
+              {subject.concepts.map((concept, i) => (
+                <li key={i}>{concept}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
