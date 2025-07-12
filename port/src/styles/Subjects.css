@@ -1,3 +1,4 @@
+/* ===== Subjects 3D Section ===== */
 .subjects-3d-section {
   min-height: 70vh;
   background-color: #0f0f0f; /* Matches internships section */
@@ -10,6 +11,7 @@
   overflow: hidden;
 }
 
+/* ===== Title ===== */
 .subjects-title {
   font-size: 2.5rem;
   margin-bottom: 50px;
@@ -29,6 +31,7 @@
   box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
 }
 
+/* ===== 3D Container ===== */
 .subject-3d-container {
   display: flex;
   justify-content: center;
@@ -38,7 +41,7 @@
   position: relative;
 }
 
-/* Subject card */
+/* ===== Subject Card Base ===== */
 .subject-3d-card {
   background: #111;
   padding: 30px;
@@ -57,7 +60,7 @@
   scrollbar-color: #00bfff transparent;
 }
 
-/* WebKit scrollbar (Chrome, Safari) */
+/* ===== Scrollbar for WebKit ===== */
 .subject-3d-card::-webkit-scrollbar {
   width: 6px;
 }
@@ -69,7 +72,7 @@
   border-radius: 8px;
 }
 
-/* Card positions */
+/* ===== Card Layout Positions ===== */
 .center-card {
   transform: scale(1.2);
   z-index: 3;
@@ -89,7 +92,7 @@
   opacity: 0.7;
 }
 
-/* Blur others on hover */
+/* ===== Hover Effects ===== */
 .subject-3d-container:hover .subject-3d-card {
   filter: blur(2px);
   opacity: 0.5;
@@ -107,7 +110,7 @@
   border: 2px solid #00bfff;
 }
 
-/* Text styles */
+/* ===== Text Styles ===== */
 .subject-3d-card h3 {
   font-size: 1.4rem;
   color: #00bfff;
@@ -134,7 +137,7 @@
   color: #00bfff;
 }
 
-/* Mobile responsive */
+/* ===== Mobile Responsive ===== */
 @media (max-width: 900px) {
   .subject-3d-container {
     flex-direction: column;
