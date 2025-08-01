@@ -9,17 +9,17 @@ const Projects = () => {
         {
             title: "Guessing Game",
             description: "A fun number guessing game built using HTML, CSS, and JavaScript. Try to guess the right number!",
-            link: "https://sayan23-sketch.github.io/SkillCraft_Technology-task2/",
+            link: " https://sayan40020805.github.io/Guess_game/",
         },
         {
             title: "Temperature Converter",
             description: "Convert between Celsius, Fahrenheit, and Kelvin using this interactive converter tool.",
-            link: "https://sayan23-sketch.github.io/SkillCraft_Technology-task1/",
+            link: "https://sayan40020805.github.io/Temperature_converter/",
         },
         {
             title: "Music App Clone",
             description: "A clone of a music player app UI with basic play/pause functionality. Responsive and clean design.",
-            link: "https://sayan23-sketch.github.io/music_copy/",
+            link: " https://sayan40020805.github.io/Spotify_Clone/",
         },
         {
             title: "Lost Pet Rescue WebApp",
